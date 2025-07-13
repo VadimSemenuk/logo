@@ -1,14 +1,5 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/*@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
 
 html,
 body {
@@ -17,12 +8,28 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  /*font-family: "Montserrat", sans-serif;*/
+  font-weight: 400;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
 }
+
+.alumni-sans-pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alumni-sans-sc {
+   font-family: "Alumni Sans SC", sans-serif;
+   font-optical-sizing: auto;
+   /*font-weight: <weight>;*/
+   font-style: normal;
+ }
 
 * {
   box-sizing: border-box;
@@ -35,8 +42,22 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+img {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
+}
+
+.pointer {
+  cursor: pointer;
 }
