@@ -9,13 +9,19 @@ body {
 
 body {
   /*font-family: Arial, Helvetica, sans-serif;*/
-  font-family: "Alumni Sans Pinstripe", sans-serif;
-  /*font-family: "Montserrat", sans-serif;*/
+  /*font-family: "Alumni Sans Pinstripe", sans-serif;*/
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-optical-sizing: auto;
+
+  /*background: 'antiquewhite',*/
+  /*background: 'rgb(237, 211, 181)',*/
+  /*background: #E9E3D0;*/
+  background: #bfc0b2;
+  color: #1b1818;
 }
 
 .alumni-sans-pinstripe-regular {
@@ -47,7 +53,8 @@ img {
 }
 
 ul {
-  list-style-type: none;
+  padding-left: 28px;
+  /*list-style-type: none;*/
 }
 
 .underline {
@@ -60,4 +67,8 @@ ul {
 
 .pointer {
   cursor: pointer;
+}
+
+.display-linebreak {
+  white-space: pre-line;
 }
