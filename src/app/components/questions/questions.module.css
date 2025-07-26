@@ -1,2 +1,41 @@
 .questions {
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 840px;
+        padding: var(--page-padding);
+
+        .titleImg {
+            height: 200px;
+            margin-top: -20px;
+        }
+
+        .title {
+            font-size: 54px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .question {
+            border-bottom: 1px solid #c7c5bd;
+            transition: 150ms linear all;
+
+            &:hover {
+                border-color: #795548;
+            }
+        }
+    }
+
+    @media(max-width: 800px) {
+        .contentWrapper {
+            .titleImg {
+                height: 130px;
+                margin-top: 0;
+            }
+
+            .title {
+                font-size: 46px;
+            }
+        }
+    }
 }

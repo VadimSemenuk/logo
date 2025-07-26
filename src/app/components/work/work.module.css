@@ -1,3 +1,49 @@
 .work {
+    background: #fbfbf9;
 
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 840px;
+        padding: var(--page-padding);
+
+        .titleImg {
+            height: 200px;
+            margin-top: -40px;
+        }
+
+        .title {
+            font-size: 54px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .workItem {
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                white-space: pre-line;
+                margin-left: 10px;
+                color: #565656;
+                margin-top: 5px;
+                margin-bottom: 20px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    @media(max-width: 800px) {
+        .contentWrapper {
+            .titleImg {
+                height: 130px;
+                margin-top: -20px;
+            }
+
+            .title {
+                font-size: 46px;
+            }
+        }
+    }
 }

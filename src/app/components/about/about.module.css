@@ -1,3 +1,89 @@
-.work {
+.about {
+    background: #fbfbf9;
 
+    .me {
+        gap: 60px;
+
+        .imgWrapper {
+            width: 40%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 100px;
+            }
+        }
+
+        .content {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .title {
+                font-size: 54px;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+
+        @media(max-width: 1000px) {
+            gap: 30px;
+        }
+
+        @media(max-width: 800px) {
+            flex-direction: column;
+
+            .imgWrapper {
+                width: 100%;
+
+                img {
+                    max-width: 400px;
+                    max-height: 400px;
+                    margin: auto;
+                }
+            }
+
+            .content {
+                width: 100%;
+
+                .title {
+                    font-size: 46px;
+                }
+            }
+        }
+    }
+
+    .studyItem {
+        margin: 10px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            border-radius: 40px;
+        }
+
+        & > img {
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: background 150ms ease-in-out;
+        }
+
+        &:hover:after {
+            background: url("/arrow_outward.svg") no-repeat center rgba(0, 0, 0, 0.42);
+        }
+    }
 }

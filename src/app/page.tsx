@@ -6,26 +6,25 @@ import Questions from "@/app/components/questions/questions";
 import Header from "@/app/components/header/header";
 import Work from "@/app/components/work/work";
 import About from "@/app/components/about/about";
+import Classes from "@/app/components/classes/classes";
+import Footer from "@/app/components/footer/footer";
+import JsonLD from "@/app/components/common/JsonLD";
 
 export default function Home() {
   return (
-    <div className={styles.main}>
-      <div
-        style={{
-          position: 'fixed',
-          width: '100%',
-          height: '100px',
-          zIndex: 1,
-        }}
-      >
+    <>
+      <JsonLD />
+      <div className={styles.header}>
         <Header />
       </div>
-      <div style={{ paddingTop: "100px" }}>
+      <div className={styles.content}>
         <Main />
         <Work />
-        <Questions />
+        <Classes />
         <About />
+        <Questions />
+        <Footer />
       </div>
-    </div>
+    </>
   );
 }

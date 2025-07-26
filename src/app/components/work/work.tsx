@@ -1,85 +1,66 @@
 import styles from "./work.module.css";
+import Image from "next/image";
+
+const work = [
+  {
+    title: "Коррекция звукопроизношения",
+    description:
+      "Работа с нарушениями произношения отдельных звуков, таких как «Ш», «С», «Р», проблемой замены «Ш» на «С» и так далее. " +
+      "Включает в себя индивидуальные занятия, направленные на исправление неправильного звучания и улучшение четкости речи."
+  },
+  {
+    title: "Постановка звука",
+    description: "Помощь в постановке конкретных звуков, например, постановка звука «Р» или «Л». Работа включает в себя тренировки артикуляции и дыхания для правильного произнесения звуков."
+  },
+  {
+    title: "Восстановление речи после инсульта и черепно-мозговой травмы",
+    description: "Восстановление утраченных речевых навыков после инсульта или травмы, с использованием индивидуальных методик для восстановления утраченных функций."
+  },
+  {
+    title: "Ускоренная/замедленная речь",
+    description: "Коррекция нарушений темпа речи, что может повлиять на понимание и восприятие информации. Работа направлена на нормализацию скорости речи и улучшение ее выразительности."
+  },
+  {
+    title: "Лечение заикания",
+    description: "Помощь в преодолении заикания с применением специальных техник и упражнений, направленных на расслабление и улучшение контроля за речевым процессом."
+  },
+  {
+    title: "Логопедический массаж",
+    description: "Массаж для улучшения артикуляции, снятия напряжения и стимуляции речевых мышц, что способствует улучшению произношения и общей моторики"
+  }
+]
 
 export default function Work() {
   return (
-    <div
+    <section
       id="work"
       className={styles.work}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: 'calc(100vh - 100px)',
-        width: "100vw",
-        background: "#E2E0C8", //oldlace darkkhaki
-        scrollMarginTop: '100px',
-      }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "800px",
-        }}
-      >
-        <img
+      <div className={styles.contentWrapper}>
+        <Image
+          className={styles.titleImg}
           src="/work.svg"
-          style={{
-            height: "200px",
-            marginTop: '-40px',
-          }}
+          alt="Направления работы"
+          width={0}
+          height={0}
         />
 
-        <span
-          style={{
-            fontSize: "54px",
-            marginBottom: '40px',
-            textAlign: 'center'
-          }}
-        >
-          Направления работы
-        </span>
+        <span className={styles.title}>Направления работы</span>
 
         <ul>
           {
-            [
-              "Коррекция звукопроизношения",
-              "Постановка звука",
-              "Восстановление речи после инсульта и черепно-мозговой травмы",
-              "Ускоренная/замедленная речь",
-              "Заикание",
-            ].map((item) => (
+            work.map((item, i) => (
               <li
-                key={item}
+                key={i}
+                className={styles.workItem}
               >
-                <a
-                  href=""
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: '5px',
-                    padding: "10px 0",
-                    fontSize: "20px",
-                    fontWeight: 500,
-                  }}
-                >
-                  <span>{item}</span>
-                  <img width="18" src="/arrow_outward.svg" />
-                </a>
-                <span
-                  style={{
-                    fontSize: "14px",
-                    fontWeight: "500",
-                    color: "#747474"
-                  }}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto deserunt distinctio error, expedita fugiat fugit harum, ipsum iste itaque nam necessitatibus nemo nulla, perferendis porro quas quisquam repellendus rerum.
-                </span>
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
               </li>
             ))
           }
         </ul>
       </div>
-    </div>
+    </section>
   );
 }

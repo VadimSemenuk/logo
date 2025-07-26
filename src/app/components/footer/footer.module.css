@@ -1,0 +1,28 @@
+.footer {
+    background: #2f2f2f;
+    color: #e4e4e4;
+
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding: 20px var(--page-padding);
+        max-width: var(--page-width);
+        margin: auto;
+
+        .contactsWrapper, .addressWrapper {
+            flex-shrink: 0;
+        }
+
+        .addressWrapper {
+            font-size: 13px;
+        }
+    }
+
+    @media(max-width: 800px) {
+        .contentWrapper {
+            flex-direction: column;
+        }
+    }
+}

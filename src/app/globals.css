@@ -1,46 +1,72 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');*/
-/*@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');*/
+:root {
+  --background: #edeae2;
+  --color: #1b1818;
+  --header-height: 70px;
+  --page-height: calc(100vh - var(--header-height));
+  --page-width: 1280px;
+  --page-padding: 40px;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  @media(max-width: 1000px) {
+    --page-padding: 20px;
+  }
 }
-
-body {
-  /*font-family: Arial, Helvetica, sans-serif;*/
-  /*font-family: "Alumni Sans Pinstripe", sans-serif;*/
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-optical-sizing: auto;
-
-  /*background: 'antiquewhite',*/
-  /*background: 'rgb(237, 211, 181)',*/
-  /*background: #E9E3D0;*/
-  background: #bfc0b2;
-  color: #1b1818;
-}
-
-.alumni-sans-pinstripe-regular {
-  font-family: "Alumni Sans Pinstripe", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.alumni-sans-sc {
-   font-family: "Alumni Sans SC", sans-serif;
-   font-optical-sizing: auto;
-   /*font-weight: <weight>;*/
-   font-style: normal;
- }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  overflow-y: auto;
+}
+
+body {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  background: var(--background);
+  color: var(--color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+
+button {
+  font-family: var(--font-montserrat), sans-serif;
+  padding: 14px 25px;
+  border-radius: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 100ms linear all;
+  box-shadow: 0 0 0 1px #c28c45 inset;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background: #c28c452e;
+  }
 }
 
 a {
@@ -50,6 +76,8 @@ a {
 
 img {
   display: block;
+  height: auto;
+  width: auto;
 }
 
 ul {
@@ -71,4 +99,12 @@ ul {
 
 .display-linebreak {
   white-space: pre-line;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--page-height);
+  scroll-margin-top: var(--header-height);
 }

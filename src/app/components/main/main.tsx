@@ -1,5 +1,6 @@
 import styles from "./main.module.css";
-import Contacts from "@/app/components/main/contacts";
+import Contacts from "@/app/components/common/contacts/contacts";
+import Image from "next/image";
 
 export default function Main() {
   return (
@@ -7,77 +8,100 @@ export default function Main() {
       id='main'
       className={styles.main}
       style={{
-        height: 'calc(100vh - 100px)',
         display: 'flex',
-        gap: '40px',
-        flexDirection: 'column',
+        alignItems: 'center',
         justifyContent: 'center',
-        scrollMarginTop: '100px',
+        minHeight: 'var(--page-height)',
+        maxWidth: 'var(--page-width)',
+        margin: 'auto',
+        padding: 'var(--page-padding)',
+        scrollMarginTop: 'var(--header-height)',
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
-        <div
-          style={{
-            width: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+      <div className={styles.contentWrapper}>
+        <div className={styles.titleWrapper}>
           <div
             style={{
-              border: '6px solid #FFFFFF',
-              borderLeft: 'none',
-              width: '100%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              flexDirection: 'column',
             }}
           >
-            <img
+            <Image
+              className={styles.logo}
               style={{
-                maxHeight: '700px',
-                maxWidth: '700px',
+                width: '150px',
+                height: "auto",
+                borderRadius: '100px',
+                objectFit: 'cover',
+                marginTop: "-30px"
               }}
-              src="/main.png"
+              src="/logo.png"
+              alt="logo"
+              width={0}
+              height={0}
             />
+
+            <h1
+              style={{
+                textAlign: 'center',
+                fontSize: '44px',
+              }}
+            >
+              Логопед для взрослых
+            </h1>
+
+            <span
+              style={{
+                fontSize: '44px',
+                color: '#c28c45',
+                textAlign: 'center',
+              }}
+            >
+              Майя Бабанова
+            </span>
+
+            <span
+              style={{
+                fontSize: '36px',
+                fontFamily: 'var(--font-great-vibes)',
+                color: "#575757",
+                marginTop: '30px',
+                textAlign: 'center',
+              }}
+            >
+              С любовью к слову и человеку
+            </span>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              flexShrink: 0,
+              gap: 20
+            }}
+          >
+            {/*<span style={{ fontSize: '18px' }}>Контакты</span>*/}
+
+            <Contacts />
           </div>
         </div>
 
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            width: '50%',
-            padding: '0 30px',
-          }}
-        >
-        <span
-          style={{
-            fontSize: '80px',
-          }}
-        >
-          <span style={{ color: 'inherit' }}>Майя</span>
-          , логопед для взрослых онлайн и офлайн в Бресте
-        </span>
+        <div className={styles.imageWrapper}>
+          <Image
+            loading="eager"
+            rel="preload"
+            src="/main.webp"
+            alt="Логопед для взрослых"
+            width={0}
+            height={0}
+            // sizes="(max-width: 600px) 100vw, 50vw"
+          />
         </div>
-      </div>
-
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100px',
-        }}
-      >
-        <Contacts />
       </div>
     </div>
   );
