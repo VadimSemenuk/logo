@@ -8,45 +8,27 @@ export default function About() {
   const [page, setPage] = useState(0);
 
   return (
-    <section
+    <div
       id="about"
       className={styles.about}
     >
       <div
+        className={styles.slider}
         style={{
-          width: '100%',
-          display: 'flex',
           transform: `translate(-${page * 100}%, 0)`,
-          transition: 'all 0.3s ease',
         }}
       >
-        <div
-          style={{
-            width: '100%',
-            flexShrink: 0,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
+        <div className={styles.sliderItem}>
           <Me
             onStudyPageRequest={() => setPage(1)}
           />
         </div>
-        <div
-          style={{
-            width: '100%',
-            flexShrink: 0,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
+        <div className={styles.sliderItem}>
           <Study
             onMePageRequest={() => setPage(0)}
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 }

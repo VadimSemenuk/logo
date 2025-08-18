@@ -1,0 +1,18 @@
+.notFound {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    .title {
+        font-size: clamp(50px, 6.5vw, 86px);
+        color: var(--title-color);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

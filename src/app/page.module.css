@@ -1,12 +1,15 @@
 .header {
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 10px;
     width: 100%;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: var(--header-height);
-    background: var(--background);
 }
 
 .content {
     background: var(--background);
+    margin-top: var(--header-height-with-offset);
 }

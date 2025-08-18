@@ -9,7 +9,7 @@ const jsonLd = {
     "addressLocality": "Брест",
     "addressRegion": "Брестская область",
     "postalCode": "224033",
-    "addressCountry": "Республика Беларусь"
+    "addressCountry": "BY"
   },
   "telephone": "+1-555-555-5555",
   "url": "https://logoadult.by",

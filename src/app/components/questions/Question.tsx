@@ -13,43 +13,18 @@ const QuestionView = ({ question }: QuestionProps) => {
 
   return (
     <div
-      className={`display-linebreak ${styles.question}`}
+      className={`${styles.question} ${isOpen ? styles.open : ""}`}
+      onClick={() => setIsOpen(!isOpen)}
     >
-      <div
-        className='pointer'
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '24px 0',
-          fontSize: '18px',
-          fontWeight: '500',
-          gap: '10px',
-        }}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <div className={styles.question_title}>
         {question.title}
-
-        <span
-          style={{
-            display: "inline-flex",
-            transform: `rotate(${isOpen ? 90 : 0}deg)`,
-            transition: 'all 150ms linear',
-          }}
-        >
-          <Arrow />
-        </span>
+        <Arrow />
       </div>
 
       <Expandable
         isOpen={isOpen}
       >
-        <div
-          style={{
-            paddingLeft: '10px',
-            fontSize: '15px',
-          }}
-        >
+        <div className={styles.question_answer}>
           {question.description}
         </div>
       </Expandable>

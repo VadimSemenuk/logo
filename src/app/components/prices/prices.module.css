@@ -1,0 +1,100 @@
+.prices {
+    background: var(--background-grey);
+    scroll-margin-top: var(--header-height-with-offset);
+
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: var(--page-width);
+        padding: var(--page-padding-vertcal) var(--page-padding-horizontal);
+        margin: auto;
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-weight: 600;
+            color: var(--title-color);
+            text-align: center;
+        }
+
+        .priceItemsWrapper {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 60px;
+
+            .priceItem {
+                color: var(--title-color);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 30px;
+                /*height: 210px;*/
+                width: 350px;
+                padding: 20px 30px;
+                border-radius: 40px;
+                background: #fff;
+                border: 1px solid #eee;
+                overflow: hidden;
+
+                .priceItem_titleWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+
+                    .priceItem_title {
+                        font-size: 40px;
+                        text-align: center;
+                    }
+
+                    .priceItem_description {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #aeaeae;
+                    }
+                }
+
+                .priceItem_valuesWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+
+                    .priceItem_valueWrapper {
+                        .priceItem_value {
+                            font-size: 50px;
+                        }
+                    }
+
+                    .priceItem_additionalValueWrapper {
+                        .priceItem_additionalValue {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 800px) {
+        .contentWrapper {
+            .priceItemsWrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+
+                .priceItem {
+                    width: 280px;
+
+                    .priceItem_titleWrapper {
+                        .priceItem_title {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

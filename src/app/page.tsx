@@ -9,8 +9,16 @@ import About from "@/app/components/about/about";
 import Classes from "@/app/components/classes/classes";
 import Footer from "@/app/components/footer/footer";
 import JsonLD from "@/app/components/common/JsonLD";
+import Callback from "@/app/components/callback/callback";
+import Prices from "@/app/components/prices/prices";
+import useScrollToSection from "@/app/utils/useScrollToSection";
+import Feedbacks from "@/app/components/feedbacks/feedbacks";
+import Advantages from "@/app/components/advantages/advantages";
 
 export default function Home() {
+
+  useScrollToSection();
+
   return (
     <>
       <JsonLD />
@@ -21,8 +29,12 @@ export default function Home() {
         <Main />
         <Work />
         <Classes />
-        <About />
+        <Advantages />
+        <Prices />
+        <Callback />
+        <Feedbacks />
         <Questions />
+        <About />
         <Footer />
       </div>
     </>

@@ -1,0 +1,201 @@
+.callback {
+    background: white;
+    scroll-margin-top: var(--header-height-with-offset);
+
+    .contentWrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: var(--page-width);
+        padding: var(--page-padding-vertcal) var(--page-padding-horizontal);
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-weight: 600;
+            color: var(--title-color);
+            text-align: center;
+        }
+
+        .freeConsultDescription {
+            width: 100%;
+            margin-bottom: 60px;
+
+            .freeConsultDescription_title {
+                text-align: center;
+                font-size: 17px;
+                font-weight: 500;
+                margin-bottom: 30px;
+            }
+
+            .freeConsultDescription_items {
+                /*display: grid;*/
+                /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+                display: flex;
+                gap: 30px;
+                flex-wrap: wrap;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    height: 1px;
+                    background: var(--accent-color);
+                }
+
+                .freeConsultDescription_item {
+                    min-width: 200px;
+                    max-width: 400px;
+                    flex: 1;
+                    z-index: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: 1px solid var(--accent-color);
+                    background: #fbf9f6;
+                    border-radius: 40px;
+                    padding: 20px 30px;
+
+                    .freeConsultDescription_item_icon {
+                        margin-bottom: 10px;
+
+                        svg {
+                            display: block;
+                            width: 40px;
+                            color: var(--accent-color);
+                        }
+                    }
+
+                    .freeConsultDescription_item_text {
+                    }
+                }
+            }
+        }
+
+        .contactsWrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+            .contactsWrapper_title {
+                text-align: center;
+            }
+        }
+
+        .callbackWrapper {
+            margin-top: 60px;
+
+            .callbackWrapper_title {
+                display: block;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &.loading {
+                    .inputWrapper, button {
+                        opacity: 0.3;
+                    }
+                }
+
+                .inputWrapper, button {
+                    transition: all 150ms linear;
+                }
+
+                .inputWrapper {
+                    font-size: 15px;
+                    border-radius: 40px;
+                    border: 1px solid var(--accent-color);
+                    background: #c28c450d;
+                    overflow: hidden;
+
+                    input, textarea {
+                        width: 100%;
+                        padding: 15px 25px;
+                    }
+
+                    textarea {
+                        resize: none;
+                        min-height: 150px;
+                    }
+
+                    &.inputWrapperPhone {
+                        display: flex;
+                        align-items: center;
+
+                        .phoneCode {
+                            padding-left: 20px;
+                        }
+
+                        input {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+
+                .checkboxWrapper {
+                    display: flex;
+                    gap: 10px;
+                    font-size: 14px;
+                    padding: 10px 30px;
+
+                    input {
+                        accent-color: var(--accent-color);
+                    }
+
+                    .dataProcessing {
+                        text-decoration: underline;
+                    }
+                }
+
+                button {
+                    margin-top: 5px;
+
+                    &[disabled] {
+                        opacity: 0.3;
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+
+        .sendSuccess {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .sendFailed {
+            text-align: center;
+            font-weight: 500;
+            color: #f66e64;
+        }
+    }
+
+    @media(max-width: 800px) {
+        .contentWrapper {
+            .freeConsultDescription {
+                .freeConsultDescription_items {
+                    flex-direction: column;
+                    align-items: center;
+
+                    &:before {
+                        height: 100%;
+                        left: 50%;
+                        width: 1px;
+                        top: 0;
+                        background: var(--accent-color);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,26 +1,17 @@
 import styles from "./questions.module.css";
 import {QuestionRepository} from "@/app/data/repository/question.repository";
 import QuestionView from "@/app/components/questions/Question";
-import Image from "next/image";
 
 export default function Questions() {
   return (
-    <section
+    <div
       id="questions"
       className={styles.questions}
     >
       <div className={styles.contentWrapper}>
-        <Image
-          className={styles.titleImg}
-          src="/help.svg"
-          alt="Часто задаваемые вопросы"
-          width={0}
-          height={0}
-        />
+        <h2 className={styles.title}>Часто задаваемые вопросы</h2>
 
-        <span className={styles.title}>Часто задаваемые вопросы</span>
-
-        <div>
+        <div className={styles.questionsWrapper}>
           {
             QuestionRepository
               .get()
@@ -33,6 +24,6 @@ export default function Questions() {
           }
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -1,0 +1,86 @@
+.header {
+    max-width: calc(var(--page-width) - var(--page-padding-horizontal) * 2);
+    transition: all 150ms linear;
+    width: 100%;
+    margin: var(--page-padding-horizontal);
+    position: relative;
+
+    &.expanded {
+        nav {
+            display: block;
+        }
+    }
+
+    .mainWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--header-height);
+        background: #0000000f;
+        border: 1px solid hsla(0, 0%, 100%, .1);
+        padding-left: 0;
+        padding-right: 10px;
+        border-radius: 40px;
+        backdrop-filter: blur(10px);
+
+        .callButton {
+            background: var(--accent-color);
+            border: none;
+            color: white;
+            height: var(--header-height);
+        }
+    }
+
+    .logo {
+        cursor: pointer;
+        font-size: 20px;
+        color: #c28c45;
+        flex-shrink: 0;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: calc(var(--header-height) + 10px);
+        width: 100%;
+        background: #0000000f;
+        border: 1px solid hsla(0, 0%, 100%, .1);
+        padding: 20px 30px;
+        border-radius: 40px;
+        backdrop-filter: blur(35px);
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            gap: 10px;
+
+            li {
+                a {
+                    display: block;
+                    padding: 10px 0;
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: 150ms linear all;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        button {
+            background: var(--accent-color);
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: none;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}

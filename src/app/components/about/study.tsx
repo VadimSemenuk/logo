@@ -1,18 +1,22 @@
 import styles from "./about.module.css";
-import Study1 from "@/../public/study/sm/1.webp";
-import Study2 from "@/../public/study/sm/2.webp";
-import Study3 from "@/../public/study/sm/3.webp";
-import Study4 from "@/../public/study/sm/4.webp";
-import Study5 from "@/../public/study/sm/5.webp";
-import Study6 from "@/../public/study/sm/6.webp";
-import Study7 from "@/../public/study/sm/7.webp";
-import Study1Orig from "@/../public/study/bg/1.webp";
-import Study2Orig from "@/../public/study/bg/2.webp";
-import Study3Orig from "@/../public/study/bg/3.webp";
-import Study4Orig from "@/../public/study/bg/4.webp";
-import Study5Orig from "@/../public/study/bg/5.webp";
-import Study6Orig from "@/../public/study/bg/6.webp";
-import Study7Orig from "@/../public/study/bg/7.webp";
+import Study1 from "../../../../public/img/study/sm/1.webp";
+import Study2 from "../../../../public/img/study/sm/2.webp";
+import Study3 from "../../../../public/img/study/sm/3.webp";
+import Study4 from "../../../../public/img/study/sm/4.webp";
+import Study5 from "../../../../public/img/study/sm/5.webp";
+import Study6 from "../../../../public/img/study/sm/6.webp";
+import Study7 from "../../../../public/img/study/sm/7.webp";
+import Study8 from "../../../../public/img/study/sm/8.webp";
+import Study9 from "../../../../public/img/study/sm/9.webp";
+import Study1Orig from "../../../../public/img/study/bg/1.webp";
+import Study2Orig from "../../../../public/img/study/bg/2.webp";
+import Study3Orig from "../../../../public/img/study/bg/3.webp";
+import Study4Orig from "../../../../public/img/study/bg/4.webp";
+import Study5Orig from "../../../../public/img/study/bg/5.webp";
+import Study6Orig from "../../../../public/img/study/bg/6.webp";
+import Study7Orig from "../../../../public/img/study/bg/7.webp";
+import Study8Orig from "../../../../public/img/study/bg/8.webp";
+import Study9Orig from "../../../../public/img/study/bg/9.webp";
 import Arrow from "@/app/components/common/icons/arrow";
 import Image from "next/image";
 
@@ -49,6 +53,14 @@ const studyItems = [
     sm: Study7.src,
     original: Study7Orig.src
   },
+  {
+    sm: Study8.src,
+    original: Study8Orig.src
+  },
+  {
+    sm: Study9.src,
+    original: Study9Orig.src
+  },
 ]
 
 export default function Study({ onMePageRequest }: Props) {
@@ -58,39 +70,13 @@ export default function Study({ onMePageRequest }: Props) {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        maxWidth: 'var(--page-width)',
-        padding: 'var(--page-padding)',
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <span
-          style={{
-            fontSize: "54px",
-            marginBottom: '40px',
-            textAlign: "center",
-          }}
-        >
+    <div className={styles.study}>
+      <div className={styles.contentWrapper}>
+        <h2 className={styles.title}>
           Мои дипломы и сертификаты
-        </span>
+        </h2>
 
-        <span
-          style={{
-            color: '#565656',
-            fontWeight: '500'
-          }}
-        >Нажмите для увеличения</span>
+        <div className={styles.openHelp}>Нажмите для увеличения</div>
 
         <div
           style={{

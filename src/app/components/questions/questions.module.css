@@ -1,40 +1,76 @@
 .questions {
+    background: white;
+    scroll-margin-top: var(--header-height-with-offset);
+
     .contentWrapper {
+        max-width: var(--page-width);
+        padding: var(--page-padding-vertcal) var(--page-padding-horizontal);
+        margin: auto;
         display: flex;
         flex-direction: column;
-        max-width: 840px;
-        padding: var(--page-padding);
-
-        .titleImg {
-            height: 200px;
-            margin-top: -20px;
-        }
+        align-items: center;
 
         .title {
-            font-size: 54px;
-            margin-bottom: 40px;
-            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            font-weight: 600;
+            color: var(--title-color);
         }
 
-        .question {
-            border-bottom: 1px solid #c7c5bd;
-            transition: 150ms linear all;
+        .questionsWrapper {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
 
-            &:hover {
-                border-color: #795548;
+            .question {
+                padding: 27px 30px;
+                white-space: pre-line;
+                border-radius: 40px;
+                border: 1px solid var(--accent-color);
+                transition: all 150ms linear;
+                cursor: pointer;
+
+                svg {
+                    transition: all 150ms linear;
+                }
+
+                &:hover {
+                    background: #c28c450d;
+                }
+
+                &.open {
+                    svg {
+                        transform: rotate(90deg);
+                    }
+                }
+
+                .question_title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-weight: 600;
+                    gap: 10px;
+                }
+
+                svg {
+                    flex-shrink: 0;
+                    width: 20px;
+                    color: #666666;
+                }
+
+                .question_answer {
+                    margin-top: 20px;
+                    margin-right: 30px;
+                }
             }
         }
     }
 
     @media(max-width: 800px) {
         .contentWrapper {
-            .titleImg {
-                height: 130px;
-                margin-top: 0;
-            }
-
             .title {
-                font-size: 46px;
+                text-align: center;
             }
         }
     }

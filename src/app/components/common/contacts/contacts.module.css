@@ -1,27 +1,35 @@
 .contacts {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    width: 100%;
+    gap: 10px;
 
     .contact {
         transition: all 150ms linear;
+        border: 1px solid #ccc;
+        padding: 17px;
+        border-radius: 50px;
 
-        &.instagram:hover {
+        svg {
+            display: block;
+        }
+
+        &.instagram {
             color: #da3434
         }
 
-        &.telegram:hover {
+        &.telegram {
             color: #2196F3
         }
 
-        &.viber:hover {
+        &.viber {
             color: #673AB7
         }
 
-        &.email:hover {
-            color: #3f51b5
+        &.whatsapp {
+            color: #45c755
+        }
+
+        &.email {
+            color: #4d4d4d
         }
     }
 }
