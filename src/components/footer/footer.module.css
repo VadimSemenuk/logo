@@ -1,0 +1,89 @@
+.footer {
+  background: #2f2f2f;
+  color: #e4e4e4;
+  position: relative;
+
+  .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--page-padding-horizontal);
+    padding-bottom: 20px;
+    max-width: var(--page-width);
+    margin: auto;
+    gap: 40px;
+
+    .credentialsWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-shrink: 0;
+
+      .contactsWrapper {
+        svg {
+          color: #e4e4e4;
+        }
+      }
+
+      .credentialItem {
+        .credentialItem_title {
+          font-size: 14px;
+          font-weight: 500;
+          color: #888888;
+        }
+
+        .credentialItem_value {
+          font-size: 18px;
+          font-weight: 500;
+          font-style: normal;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .rightWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+
+      .buttonUp {
+        color: white;
+        height: 70px;
+        width: 70px;
+
+        svg {
+          transform: rotate(-90deg);
+        }
+      }
+
+      .dataProcessingWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+
+  .logo {
+    padding: 0 var(--page-padding-horizontal);
+    max-width: var(--page-width);
+    font-weight: 600;
+    color: #3c3c3c;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(80px, 13vw, 176px);
+    margin: auto;
+  }
+
+  @media(max-width: 800px) {
+    .contentWrapper {
+      flex-direction: column;
+
+      .rightWrapper {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+    }
+  }
+}

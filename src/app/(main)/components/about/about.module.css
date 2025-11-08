@@ -1,0 +1,30 @@
+.about {
+  overflow: hidden;
+  margin-top: 120px;
+
+  .title {
+    font-size: 30px;
+    margin-left: 60px;
+  }
+
+  .slider {
+    margin-top: 40px;
+    display: flex;
+    transition: all 0.3s ease;
+
+    .sliderItem {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+
+  @media(max-width: 800px) {
+    .me {
+      .contentWrapper {
+        .title {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

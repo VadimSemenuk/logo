@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import {Inter, Montserrat} from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
-import {Yandex} from "@/app/components/common/seo/yandex";
+import styles from "./layout.module.css";
+// import {Yandex} from "@/_components/seo/yandex";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["cyrillic"]
+const inter = Manrope({
+  variable: "--font-manrope",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["cyrillic"]
-});
+const title = "Логопед для взрослых онлайн и оффлайн в Бресте";
+const description =
+  "Индивидуальные занятия с логопедом. Постановка и коррекция звуков, лечение заикания, восстановление речи после инсульта и черепно-мозговой травмы, логопедический массаж";
 
 export const metadata: Metadata = {
-  title: "Логопед для взрослых онлайн и оффлайн в Бресте",
-  description: "Индивидуальные занятия. Постановка и коррекция звуков, восстановление речи после инсульта и черепно-мозговой травмы, лечение заикания, ускоренная/замедленная речь, массаж",
+  title,
+  description,
   keywords: [
     "Логопед",
     "Логопед для взрослых",
@@ -24,29 +25,27 @@ export const metadata: Metadata = {
     "Восстановление речи после инсульта и черепно-мозговой травмы",
     "Ускоренная/замедленная речь",
     "Заикание",
-    "Лечение заикания",
     "Логопедический массаж",
     "Онлайн",
-    "Оффлайн",
     "Брест",
-    "Беларусь"
   ],
   openGraph: {
     type: "website",
-    title: "Логопед для взрослых онлайн и оффлайн в Бресте",
-    description: "Индивидуальные занятия. Постановка и коррекция звуков, восстановление речи после инсульта и черепно-мозговой травмы, лечение заикания, ускоренная/замедленная речь, массаж",
+    title,
+    description,
     emails: ["babanovamaya@yandex.by"],
     phoneNumbers: ["%2B375445931003"],
     siteName: "Logo Adult",
     images: "https://www.logoadult.by/main.webp",
-    url: "https://www.logoadult.by"
+    url: "https://www.logoadult.by",
   },
   alternates: {
-    canonical: "https://www.logoadult.by"
+    canonical: "https://www.logoadult.by",
   },
   other: {
-    "yandex-verification": "8547f13ee7c21131"
-  }
+    "yandex-verification": "8547f13ee7c21131",
+    "zen-verification": "tvWRACgORsdtwK14mtRp9I6k57G3XRCjS47E2WwfVTzIqzuEizp9Tab0HVh6ehBI",
+  },
 };
 
 export default function RootLayout({
@@ -56,10 +55,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-    <body className={`${montserrat.variable} ${inter.variable}`}>
-      {children}
-    </body>
-    <Yandex />
+      <body className={`${inter.variable}`}>
+        <div className={styles.headerWrapper}>
+          <Header />
+        </div>
+
+        <main className={styles.contentWrapper}>{children}</main>
+
+        <Footer />
+      </body>
+      {/*<Yandex />*/}
     </html>
   );
 }

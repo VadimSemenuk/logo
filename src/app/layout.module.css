@@ -1,0 +1,18 @@
+.headerWrapper {
+  position: fixed;
+  top: var(--header-offset);
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--header-height);
+}
+
+.contentWrapper {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding-horizontal);
+  padding-top: var(--header-height-with-offset);
+  padding-bottom: var(--page-padding-horizontal);
+}

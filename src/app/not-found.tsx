@@ -1,11 +1,7 @@
-import Link from 'next/link'
-import styles from './not-found.module.css'
+import NotFoundView from "@/components/not-found/not-found";
 
 export default function NotFound() {
   return (
-    <div className={styles.notFound}>
-      <span className={styles.title}>Страница не найдена</span>
-      <Link href="/">Перейти на главную</Link>
-    </div>
+    <NotFoundView />
   )
 }

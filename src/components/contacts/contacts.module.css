@@ -1,0 +1,35 @@
+.contacts {
+  display: flex;
+  gap: 10px;
+
+  .contact {
+    transition: all 150ms linear;
+    border: 1px solid #ccc;
+    padding: 17px;
+    border-radius: 50px;
+
+    svg {
+      display: block;
+    }
+
+    &.instagram {
+      color: #da3434
+    }
+
+    &.telegram {
+      color: #2196F3
+    }
+
+    &.viber {
+      color: #673AB7
+    }
+
+    &.whatsapp {
+      color: #45c755
+    }
+
+    &.email {
+      color: #4d4d4d
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.callbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+
+  &.loading {
+    .inputWrapper, button {
+      opacity: 0.3;
+    }
+  }
+
+  .inputWrapper {
+    background: #fff;
+    border-radius: 24px;
+
+    input, textarea {
+      padding: 22px 30px;
+      width: 100%;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 150px;
+    }
+  }
+
+  .checkboxWrapper {
+    display: flex;
+    gap: 10px;
+    padding: 10px 30px;
+    align-items: center;
+
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border: 1px solid #FFD392;
+      border-radius: 5px;
+      background-color: #FFFFFF;
+      cursor: pointer;
+      padding: 0;
+      accent-color: #FFD392;
+      color: #6E4A15;
+
+      &:checked {
+        background-color: #FFD392;
+        background-image: url('../../../../../../public/img/icons/check.svg');
+      }
+    }
+  }
+
+  button {
+    background: #FFD392;
+    color: #6E4A15;
+    padding: 22px 30px;
+    border-radius: 24px;
+    font-size: 20px;
+  }
+}

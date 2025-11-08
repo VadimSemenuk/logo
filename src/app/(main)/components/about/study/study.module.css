@@ -1,0 +1,57 @@
+.study {
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .openHelp {
+    text-align: center;
+    opacity: 0.6;
+  }
+
+  .studyItems {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .studyItem {
+      margin: 10px;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 150ms ease-in-out;
+      border-radius: var(--border-radius-sm);
+
+      &:hover {
+        border-radius: var(--border-radius-md);
+      }
+
+      & > img {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: background 150ms ease-in-out;
+      }
+
+      &:hover:after {
+        background: url("/img/arrow_outward.svg") no-repeat center rgba(0, 0, 0, 0.42);
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+}
