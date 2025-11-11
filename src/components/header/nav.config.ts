@@ -1,22 +1,22 @@
 export const routes = [
   {
-    path: "work",
+    path: "workAreas",
     name: "Услуги",
-  },
-  {
-    path: "classes",
-    name: "Занятия",
-  },
-  {
-    path: "prices",
-    name: "Цены",
   },
   {
     path: "feedbacks",
     name: "Отзывы",
   },
   {
+    path: "prices",
+    name: "Цены",
+  },
+  {
+    path: "callback",
+    name: "Контакты",
+  },
+  {
     path: "questions",
     name: "Вопросы",
   },
-]
+];

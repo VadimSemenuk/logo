@@ -1,14 +1,19 @@
 @import "../styles/reset.css";
+@import "../components/modal/modal.css";
 
 :root {
-  --color-background: #F0EBE5;
-  --color-surface: #F8F6F4;
-  --color-accent: #f4c480;
-  --color-dark: #222222;
+  --color-background: #F4F2F0;
+  --color-surface: #00000008;
+  /*--color-accent: #f4c480;*/
+  --color-accent: #FFD392;
+  --color-accent-light: #FFEDD1;
+  --color-accent-second: #214F36;
+  --color-border: #CCCCCC;
+  /*--color-accent-second: #22333B;*/
 
-  --color-text: var(--color-dark);
-  --color-text-accent-brown: #926D35;
-  --color-text-accent-blue: #266eac;
+  --color-text: #222222;
+  --color-text-accent-dark: #6E4A15;
+  --color-text-accent: #915d0e;
 
   --header-height: 55px;
   --header-offset: 30px;
@@ -16,18 +21,13 @@
 
   --page-width: 1280px;
   --page-padding-horizontal: 40px;
+  --grid-gap: 24px;
+
+  --section-offset: 200px;
+  --section-title-offset: 60px;
 
   --border-radius-xl: 100px;
-  --border-radius-lg: 60px;
-  --border-radius-md: 36px;
-  --border-radius-sm: 24px;
-  --border-radius-xs: 16px;
-
-  --font-size-h2: 30px;
-  --font-size-h3: 24px;
-
-  --grid-gap: 24px;
-  --grid-list-gap: 10px;
+  --border-radius-full: 9999px;
 }
 
 body {
@@ -47,7 +47,7 @@ body {
 }
 
 a {
-  color: #2196f3;
+  color: #0965ae;
   text-decoration: underline;
 
   &.undecorated {
@@ -70,27 +70,60 @@ img, video {
 .card {
   background: var(--color-surface);
   padding: 40px;
-  border-radius: var(--border-radius-md);
 
-  &.card-outline {
+  &.outline {
     background: transparent;
-    border: 2px solid #b9ab9c;
+    border: 1px solid #b9ab9c;
   }
 }
 
 button, .button {
   background: var(--color-accent);
-  color: #6E4A15;
-  padding: 22px 30px;
+  color: var(--color-text-accent-dark);
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
   cursor: pointer;
-  border-radius: var(--border-radius-xl);
+  border-radius: var(--border-radius-full);
   transition: 150ms ease;
+  width: 100%;
 
   &:hover {
     background: #eabc7a;
+  }
+}
+
+.sectionTitleWrapper {
+  margin-bottom: var(--section-title-offset);
+
+  .name {
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: clamp(33px, 6vw, 42px);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .description {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --header-offset: 20px;
+    --page-padding-horizontal: 20px;
+    --section-offset: 120px;
+    --section-title-offset: 40px;
+    --border-radius-xl: 70px;
+  }
+
+  .card {
+    padding: 30px 20px;
   }
 }

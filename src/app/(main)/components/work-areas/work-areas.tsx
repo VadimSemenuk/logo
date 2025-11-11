@@ -1,40 +1,16 @@
 import styles from "./work-areas.module.css";
 import Image from "next/image";
-
-const workAreas = [
-  {
-    title: "Постановка и коррекция звуков",
-    description:
-      "Работа с нарушениями произношения звуков, таких как «Р», «Ш», «С», проблемой замены «Ш» на «С» и так далее",
-    image: "/img/work/1.webp",
-  },
-  {
-    title: "Восстановление речи после инсульта и ЧМТ",
-    description:
-      "Восстановление утраченных речевых навыков после инсульта или черепно-мозговой травмы",
-    image: "/img/work/3.webp",
-  },
-  {
-    title: "Лечение заикания",
-    description: "Работа направлена на расслабление и улучшение контроля за речевым процессом",
-    image: "/img/work/5.webp",
-  },
-  {
-    title: "Логопедический массаж",
-    description: "Массаж для улучшения артикуляции, снятия напряжения и стимуляции речевых мышц",
-    image: "/img/work/6.webp",
-  },
-];
+import workAreas from "./work-areas-data";
 
 export default function WorkAreas() {
   return (
     <div
-      id="work"
-      className={styles.work}
+      id="workAreas"
+      className={styles.workAreas}
     >
-      <div>
-        <div></div>
-        <h2 className={styles.title}>Направления работы</h2>
+      <div className="sectionTitleWrapper">
+        <div className="name">[направления работы]</div>
+        <h2 className="title">Помогаю с различными нарушениями речи</h2>
       </div>
 
       <ul className={styles.workList}>
@@ -43,14 +19,7 @@ export default function WorkAreas() {
             key={i}
             className={`${styles.workItem} card`}
           >
-            {/*<div className={styles.workItem_imageWrapper}>*/}
-            <Image
-              src={item.image}
-              alt={item.description}
-              width={200}
-              height={200}
-            />
-            {/*</div>*/}
+            {item.icon}
 
             <div className={styles.workItem_contentWrapper}>
               <h3>{item.title}</h3>
@@ -58,6 +27,15 @@ export default function WorkAreas() {
             </div>
           </li>
         ))}
+
+        <li className={styles.workItemImage}>
+          <Image
+            src="/img/class.webp"
+            alt="направления работы"
+            width={300}
+            height={300}
+          />
+        </li>
       </ul>
     </div>
   );

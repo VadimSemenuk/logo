@@ -9,9 +9,7 @@ export default function Questions() {
       id="questions"
       className={styles.questions}
     >
-      <h2 className={styles.title}>Часто задаваемые вопросы</h2>
-
-      <div className={classNames(styles.contentWrapper, "card card-outline")}>
+      <div className={classNames(styles.contentWrapper, "card")}>
         <div className={styles.questionsWrapper}>
           {questions.map((question, index) => (
             <QuestionView
@@ -20,6 +18,10 @@ export default function Questions() {
             />
           ))}
         </div>
+      </div>
+
+      <div className={classNames("sectionTitleWrapper", styles.sectionTitleWrapper)}>
+        <h2 className="title">Часто задаваемые вопросы</h2>
       </div>
     </div>
   );

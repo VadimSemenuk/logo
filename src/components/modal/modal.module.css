@@ -1,0 +1,30 @@
+.close {
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  max-height: 100vh;
+  overflow: hidden;
+  padding: var(--page-padding-horizontal) 0;
+
+  .content {
+    flex-grow: 1;
+    overflow: auto;
+    padding: 0 var(--page-padding-horizontal);
+  }
+
+  .closeWrapper {
+    margin-top: 20px;
+    padding: 0 var(--page-padding-horizontal);
+
+    button {
+      flex-shrink: 0;
+    }
+  }
+}

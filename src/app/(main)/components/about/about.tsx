@@ -11,7 +11,9 @@ export default function About() {
       id="about"
       className={styles.about}
     >
-      <h2 className={styles.title}>Обо мне</h2>
+      <div className="sectionTitleWrapper">
+        <h2 className="title">Обо мне</h2>
+      </div>
 
       <div
         className={styles.slider}

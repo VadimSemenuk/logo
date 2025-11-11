@@ -1,0 +1,31 @@
+.ReactModalPortal {
+  position: relative;
+  z-index: 9999;
+
+  .ReactModal__Overlay {
+    background-color: #0000004d !important;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+
+    .ReactModal__Content {
+      transform: translate(-50%, 100%) !important;
+      transition: all 150ms ease-in-out;
+    }
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+
+    .ReactModal__Content--after-open {
+      transform: translate(-50%, -50%) !important;
+    }
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+
+    .ReactModal__Content--before-close {
+      transform: translate(-50%, 100%) !important;
+    }
+  }
+}

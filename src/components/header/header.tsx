@@ -31,7 +31,8 @@ export default function Header() {
       <header>
         <div className={styles.mainContainer}>
           <button
-            className={`${styles.callButton} accent`}
+            className={styles.callButton}
+            aria-label="получить консультацию"
             onClick={() => scrollToPath("callback")}
           >
             <Email />
@@ -47,6 +48,7 @@ export default function Header() {
           <div className={styles.navButton}>
             <Button
               isActive={isExpanded}
+              aria-label="показать или скрыть ответ"
               onClick={handleNavButtonClick}
             />
           </div>
@@ -60,6 +62,7 @@ export default function Header() {
                   <a
                     className="undecorated"
                     href={`#${route.path}`}
+                    aria-label={route.name}
                     onClick={(e) => {
                       e.preventDefault();
                       handleLinkClick(route.path);
@@ -70,18 +73,18 @@ export default function Header() {
                 </li>
               ))}
 
-              <li>
-                <a
-                  className="button undecorated"
-                  href="#callback"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleLinkClick("callback");
-                  }}
-                >
-                  Связаться
-                </a>
-              </li>
+              {/*<li>*/}
+              {/*  <a*/}
+              {/*    className="button undecorated"*/}
+              {/*    href="#callback"*/}
+              {/*    onClick={(e) => {*/}
+              {/*      e.preventDefault();*/}
+              {/*      handleLinkClick("callback");*/}
+              {/*    }}*/}
+              {/*  >*/}
+              {/*    Связаться*/}
+              {/*  </a>*/}
+              {/*</li>*/}
             </ul>
           </nav>
         </div>

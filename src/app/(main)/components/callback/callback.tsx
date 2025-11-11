@@ -1,7 +1,7 @@
 import styles from "./callback.module.css";
 import Contacts from "@/components/contacts/contacts";
-import classNames from "classnames";
 import CallbackForm from "./callback-form/callback-form";
+import classNames from "classnames";
 
 export default function Callback() {
   return (
@@ -9,18 +9,21 @@ export default function Callback() {
       id="callback"
       className={styles.callback}
     >
-      <h2 className={styles.title}>Вы можете задать любой интересующий вопрос</h2>
+      <div className={classNames("sectionTitleWrapper", styles.sectionTitleWrapper)}>
+        <h2 className="title">Получить консультацию</h2>
+        <div className={classNames("description", styles.description)}>
+          Задайте любой интересующий вопрос, используя мессенджеры или форму обратной связи
+        </div>
+      </div>
 
-      <div className={classNames(styles.contentWrapper, 'card')}>
-        <div className={styles.content_title_contacts}>Связаться со мной можно одном из способов</div>
-
-        <div className={styles.contactsWrapper}>
+      <div className={classNames(styles.contentWrapper, "card")}>
+        <div className={styles.contactsSection}>
+          <div>Контакты</div>
           <Contacts />
         </div>
 
-        <div className={styles.content_title_callback}>Или оставьте свои контактные данные и я обязательно Вам отвечу :)</div>
-
-        <div className={styles.callbackWrapper}>
+        <div className={styles.callbackFormSection}>
+          <div>Или оставьте свои контактные данные, и я обязательно Вам отвечу :)</div>
           <CallbackForm />
         </div>
       </div>

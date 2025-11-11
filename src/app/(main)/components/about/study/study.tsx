@@ -1,86 +1,11 @@
 import styles from "./study.module.css";
-import Study1 from "../../../../../../public/img/study/sm/1.webp";
-import Study2 from "../../../../../../public/img/study/sm/2.webp";
-import Study3 from "../../../../../../public/img/study/sm/3.webp";
-import Study4 from "../../../../../../public/img/study/sm/4.webp";
-import Study5 from "../../../../../../public/img/study/sm/5.webp";
-import Study6 from "../../../../../../public/img/study/sm/6.webp";
-import Study7 from "../../../../../../public/img/study/sm/7.webp";
-import Study8 from "../../../../../../public/img/study/sm/8.webp";
-import Study9 from "../../../../../../public/img/study/sm/9.webp";
-import Study10 from "../../../../../../public/img/study/sm/10.webp";
-import Study11 from "../../../../../../public/img/study/sm/11.webp";
-import Study12 from "../../../../../../public/img/study/sm/12.webp";
-import Study1Orig from "../../../../../../public/img/study/bg/1.webp";
-import Study2Orig from "../../../../../../public/img/study/bg/2.webp";
-import Study3Orig from "../../../../../../public/img/study/bg/3.webp";
-import Study4Orig from "../../../../../../public/img/study/bg/4.webp";
-import Study5Orig from "../../../../../../public/img/study/bg/5.webp";
-import Study6Orig from "../../../../../../public/img/study/bg/6.webp";
-import Study7Orig from "../../../../../../public/img/study/bg/7.webp";
-import Study8Orig from "../../../../../../public/img/study/bg/8.webp";
-import Study9Orig from "../../../../../../public/img/study/bg/9.webp";
-import Study10Orig from "../../../../../../public/img/study/bg/10.webp";
-import Study11Orig from "../../../../../../public/img/study/bg/11.webp";
-import Study12Orig from "../../../../../../public/img/study/bg/12.webp";
-import Arrow from "@/components/icons/arrow";
 import Image from "next/image";
 import classNames from "classnames";
+import studyItems from "./study-data";
 
 interface Props {
   onMePageRequest(): void;
 }
-
-const studyItems = [
-  {
-    sm: Study1.src,
-    original: Study1Orig.src,
-  },
-  {
-    sm: Study2.src,
-    original: Study2Orig.src,
-  },
-  {
-    sm: Study3.src,
-    original: Study3Orig.src,
-  },
-  {
-    sm: Study4.src,
-    original: Study4Orig.src,
-  },
-  {
-    sm: Study5.src,
-    original: Study5Orig.src,
-  },
-  {
-    sm: Study6.src,
-    original: Study6Orig.src,
-  },
-  {
-    sm: Study7.src,
-    original: Study7Orig.src,
-  },
-  {
-    sm: Study8.src,
-    original: Study8Orig.src,
-  },
-  {
-    sm: Study9.src,
-    original: Study9Orig.src,
-  },
-  {
-    sm: Study10.src,
-    original: Study10Orig.src,
-  },
-  {
-    sm: Study11.src,
-    original: Study11Orig.src,
-  },
-  {
-    sm: Study12.src,
-    original: Study12Orig.src,
-  },
-];
 
 export default function Study({ onMePageRequest }: Props) {
   const handleStudyItemClick = (item: string) => {
@@ -91,7 +16,7 @@ export default function Study({ onMePageRequest }: Props) {
     <div className={classNames(styles.study, "card")}>
       <h2 className={styles.title}>Мои дипломы и сертификаты</h2>
 
-      <div className={styles.openHelp}>Нажмите для увеличения</div>
+      <div className={styles.openHelp}>[нажмите для увеличения]</div>
 
       <div className={styles.studyItems}>
         {studyItems.map((item, i) => (
@@ -103,8 +28,8 @@ export default function Study({ onMePageRequest }: Props) {
             <Image
               src={item.original}
               alt="Диплом"
-              width={0}
-              height={0}
+              width={150}
+              height={150}
             />
           </div>
         ))}
@@ -114,11 +39,9 @@ export default function Study({ onMePageRequest }: Props) {
         style={{
           marginTop: "40px",
         }}
+        aria-label="обо мне"
         onClick={onMePageRequest}
       >
-        <span style={{ display: "inline-flex", transform: "rotate(-180deg)" }}>
-          <Arrow />
-        </span>
         Обо мне
       </button>
     </div>

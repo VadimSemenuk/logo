@@ -3,7 +3,6 @@
 import styles from "./footer.module.css";
 import Contacts from "@/components/contacts/contacts";
 import Arrow from "@/components/icons/arrow";
-import classNames from "classnames";
 
 export default function Footer() {
   const handleUpClick = () => {
@@ -32,6 +31,7 @@ export default function Footer() {
               <a
                 className="undecorated"
                 href="https://yandex.by/maps/-/CHTtzSYw"
+                aria-label="адрес"
               >
                 Грюнвальдская улица, 12А
                 <br />
@@ -48,6 +48,7 @@ export default function Footer() {
               <a
                 className="undecorated"
                 href="tel:+375445931003"
+                aria-label="телефон"
               >
                 +375 (44) 593-10-03
               </a>
@@ -64,6 +65,7 @@ export default function Footer() {
           <button
             className={styles.buttonUp}
             onClick={handleUpClick}
+            aria-label="вверх"
           >
             <Arrow />
           </button>
@@ -73,6 +75,7 @@ export default function Footer() {
               className="undecorated"
               href="https://docs.google.com/document/d/1e9TWDvQ4PhZ5UTQhBLbYpbZXT-Bt0zu85dMAWtzXlXs/edit?usp=sharing"
               target="_blank"
+              aria-label="политика обработки данных"
             >
               Политика обработки данных
             </a>
@@ -81,14 +84,13 @@ export default function Footer() {
               className="undecorated"
               href="https://docs.google.com/document/d/1WtgFg9i5rUWQKTIjwsoryWTCNOr8Ji7MsDOZfUvRND4/edit?usp=sharing"
               target="_blank"
+              aria-label="публичная оферта на предоставление услуг"
             >
               Публичная оферта на предоставление услуг
             </a>
           </div>
         </div>
       </div>
-
-      <div className={styles.logo}>LOGO ADULT</div>
     </footer>
   );
 }

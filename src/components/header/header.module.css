@@ -15,17 +15,19 @@
       align-items: center;
       justify-content: space-between;
       align-self: stretch;
-      background: #ffffff8a;
+      background: var(--color-surface);
       /*background: #0000000f;*/
       /*background: #cfc8be47;*/
       width: 100%;
-      border-radius: var(--border-radius-md);
-      padding-left: 30px;
+      border-radius: var(--border-radius-full);
+      padding: 0 30px;
       height: var(--header-height);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(30px);
       margin: 0 auto;
 
       .callButton {
+        width: auto;
+        padding: 0 20px;
         height: var(--header-height);
         display: none;
       }
@@ -34,7 +36,7 @@
         cursor: pointer;
         font-size: 20px;
         flex-shrink: 0;
-        /*color: #ffffff;*/
+        color: var(--color-text-accent);
       }
 
       .navButton {
@@ -45,15 +47,16 @@
     .navContainer {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 30px;
 
       nav {
         ul {
           list-style: none;
           padding: 0;
           display: flex;
-          gap: 30px;
+          gap: 25px;
           align-items: center;
+          height: var(--header-height);
 
           li {
             a:not(:global(a.button)) {
@@ -94,16 +97,6 @@
         }
       }
     }
-
-    @media(max-width: 900px) {
-      .navContainer {
-        nav {
-          ul {
-            gap: 15px;
-          }
-        }
-      }
-    }
   }
 
   .overflow {
@@ -133,25 +126,25 @@
 
       .navContainer {
         display: none;
+        right: 0;
 
         nav {
           position: absolute;
           top: calc(var(--header-height) + 10px);
           width: 100%;
-          background: #0000000f;
+          background: var(--color-surface);
           padding: 20px 30px;
           border-radius: 40px;
-          backdrop-filter: blur(35px);
+          backdrop-filter: blur(30px);
 
           ul {
-            list-style: none;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-weight: 500;
             gap: 10px;
+            height: auto;
 
             li {
               a:not(:global(a.button)) {
@@ -161,8 +154,8 @@
                 overflow: hidden;
                 cursor: pointer;
                 transition: 150ms linear all;
-                text-transform: uppercase;
-                font-size: 14px;
+                text-transform: none;
+                font-size: 20px;
               }
             }
           }

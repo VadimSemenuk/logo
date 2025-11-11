@@ -1,5 +1,4 @@
 import styles from "./me.module.css";
-import Arrow from "@/components/icons/arrow";
 import Image from "next/image";
 import classNames from "classnames";
 
@@ -24,14 +23,12 @@ const about = `Меня зовут Майя, я преподаватель в у
 export default function Me({ onStudyPageRequest }: Props) {
   return (
     <div className={styles.me}>
-      <div className={styles.imageWrapper}>
-        <Image
-          src="/img/about.webp"
-          alt="Обо мне"
-          width={400}
-          height={300}
-        />
-      </div>
+      <Image
+        src="/img/about.webp"
+        alt="Обо мне"
+        width={400}
+        height={300}
+      />
 
       <div className={classNames(styles.contentWrapper, "card")}>
         <p
@@ -40,9 +37,11 @@ export default function Me({ onStudyPageRequest }: Props) {
           }}
         ></p>
 
-        <button onClick={onStudyPageRequest}>
+        <button
+          aria-label="мои дипломы и сертификаты"
+          onClick={onStudyPageRequest}
+        >
           Мои дипломы и сертификаты
-          <Arrow />
         </button>
       </div>
     </div>

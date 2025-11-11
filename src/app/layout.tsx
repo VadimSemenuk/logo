@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
-// import {Yandex} from "@/_components/seo/yandex";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import { Yandex } from "@/components/seo/yandex";
 
 const inter = Manrope({
   variable: "--font-manrope",
+  subsets: ["cyrillic"],
 });
 
 const title = "Логопед для взрослых онлайн и оффлайн в Бресте";
@@ -64,7 +65,7 @@ export default function RootLayout({
 
         <Footer />
       </body>
-      {/*<Yandex />*/}
+      <Yandex />
     </html>
   );
 }

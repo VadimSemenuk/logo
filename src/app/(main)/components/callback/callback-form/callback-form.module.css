@@ -1,9 +1,8 @@
 .callbackForm {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 500px;
-  margin: 0 auto;
+  gap: 5px;
 
   &.loading {
     .inputWrapper, button {
@@ -13,10 +12,9 @@
 
   .inputWrapper {
     background: #fff;
-    border-radius: 24px;
 
     input, textarea {
-      padding: 22px 30px;
+      padding: 20px;
       width: 100%;
     }
 
@@ -29,7 +27,7 @@
   .checkboxWrapper {
     display: flex;
     gap: 10px;
-    padding: 10px 30px;
+    padding: 20px 0;
     align-items: center;
 
     input {
@@ -37,26 +35,18 @@
       appearance: none;
       width: 24px;
       height: 24px;
-      border: 1px solid #FFD392;
-      border-radius: 5px;
+      border: 1px solid var(--color-accent);
       background-color: #FFFFFF;
       cursor: pointer;
       padding: 0;
-      accent-color: #FFD392;
-      color: #6E4A15;
+      accent-color: var(--color-accent);
+      color: var(--color-text-accent-dark);
+      flex-shrink: 0;
 
       &:checked {
-        background-color: #FFD392;
+        background-color: var(--color-accent);
         background-image: url('../../../../../../public/img/icons/check.svg');
       }
     }
-  }
-
-  button {
-    background: #FFD392;
-    color: #6E4A15;
-    padding: 22px 30px;
-    border-radius: 24px;
-    font-size: 20px;
   }
 }

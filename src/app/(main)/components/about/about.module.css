@@ -1,11 +1,7 @@
 .about {
   overflow: hidden;
-  margin-top: 120px;
-
-  .title {
-    font-size: 30px;
-    margin-left: 60px;
-  }
+  margin-top: var(--section-offset);
+  scroll-margin-top: var(--header-height-with-offset);
 
   .slider {
     margin-top: 40px;
@@ -15,16 +11,6 @@
     .sliderItem {
       width: 100%;
       flex-shrink: 0;
-    }
-  }
-
-  @media(max-width: 800px) {
-    .me {
-      .contentWrapper {
-        .title {
-          text-align: center;
-        }
-      }
     }
   }
 }

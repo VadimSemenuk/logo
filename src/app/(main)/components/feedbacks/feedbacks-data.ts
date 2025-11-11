@@ -1,7 +1,6 @@
 export interface Feedback {
-  image?: string;
+  image?: { sm: string; bg: string };
   video?: string;
-  videoPreview?: string;
   name: string;
   title: string;
   description: string;
@@ -9,7 +8,10 @@ export interface Feedback {
 
 export const feedbacks: Feedback[] = [
   {
-    image: "/img/feedback/1.webp",
+    image: {
+      sm: "/img/feedback/sm/1.webp",
+      bg: "/img/feedback/bg/1.webp",
+    },
     name: "Марина",
     title: "Шипящие звуки: от постановки до свободной речи за 3 месяца",
     description:
@@ -20,7 +22,10 @@ export const feedbacks: Feedback[] = [
       "Шипящие звуки ставятся довольно несложно и хорошо входят в речь, все зависит от индивидуальных особенностей, частоты встреч и отработки материала.",
   },
   {
-    image: "/img/feedback/2.webp",
+    image: {
+      sm: "/img/feedback/sm/2.webp",
+      bg: "/img/feedback/bg/2.webp",
+    },
     name: "Михаил",
     title: "Исправление межзубного произношения перед выпускным классом",
     description:
@@ -31,8 +36,11 @@ export const feedbacks: Feedback[] = [
       "Очень приятно, что есть такие ответственные и осознанные ребята, озадаченные красотой своей речи. Работа с такими учениками всегда неимоверно вдохновляет. 🙌🏻",
   },
   {
-    videoPreview: "/img/feedback/3.webp",
-    video: "/img/feedback/3.mp4",
+    image: {
+      sm: "/img/feedback/sm/3.webp",
+      bg: "/img/feedback/bg/3.webp",
+    },
+    video: "/img/feedback/bg/3.mp4",
     name: "Елена",
     title: "Один звук — разные судьбы",
     description:
