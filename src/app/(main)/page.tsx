@@ -10,6 +10,7 @@ import Callback from "@/app/(main)/components/callback/callback";
 import Questions from "@/app/(main)/components/questions/questions";
 import About from "@/app/(main)/components/about/about";
 import SeoText from "@/app/(main)/components/seo-text/seo-text";
+import Apps from "@/app/(main)/components/apps/apps";
 
 export default function Page() {
   useScrollToSection();
@@ -23,6 +24,7 @@ export default function Page() {
       <Prices />
       <Callback />
       <Questions />
+      <Apps />
       <About />
       <SeoText />
     </>
