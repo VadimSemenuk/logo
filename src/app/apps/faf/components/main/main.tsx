@@ -12,19 +12,19 @@ export default function Main() {
       <div className={styles.textWrapper}>
         <div>
           <h1>
-            <strong>DAF</strong> - терапия заикания
+            <strong>FAF</strong> - терапия заикания
           </h1>
 
           <h2 className={styles.description}>
-            Delayed Auditory Feedback (DAF) - техника отложенной слуховой обратной связи - замедляет
-            вашу речь, чтобы вы могли говорить&nbsp;
+            Frequency-Altered Auditory Feedback (FAF) - техника слуховой обратной связи c изменённой
+            частотой - замедляет вашу речь, чтобы вы могли говорить&nbsp;
             <span className={styles.highlight}>четко и плавно</span>
           </h2>
         </div>
 
         <div className={styles.links}>
           <a
-            href="https://play.google.com/store/apps/details?id=com.pragmatsoft.daf"
+            href="https://play.google.com/store/apps/details?id=com.pragmatsoft.faf"
             target="_blank"
             className={styles.link}
           >
@@ -37,7 +37,7 @@ export default function Main() {
           </a>
 
           <a
-            href="https://daf.logoadult.by/"
+            href="https://faf.logoadult.by/"
             target="_blank"
             className={classNames(styles.browserVersion, styles.link, "button")}
           >
@@ -58,8 +58,8 @@ export default function Main() {
         className={styles.mainImg}
         loading="eager"
         rel="preload"
-        src="/img/daf.webp"
-        alt="DAF - тренировка плавности речи"
+        src="/img/faf.webp"
+        alt="FAF - тренировка плавности речи"
         width={0}
         height={0}
         fetchPriority="high"

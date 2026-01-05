@@ -5,6 +5,7 @@ import { useState } from "react";
 import { routes } from "@/components/header/nav.config";
 import Email from "@/components/icons/email";
 import Button from "@/components/header/components/button/button";
+import Link from "next/link";
 
 export default function Header() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -38,12 +39,12 @@ export default function Header() {
             <Email />
           </button>
 
-          <span
+          <Link
+            href="/"
             className={styles.logo}
-            onClick={() => scrollToPath("main")}
           >
             LOGO ADULT
-          </span>
+          </Link>
 
           <div className={styles.navButton}>
             <Button
