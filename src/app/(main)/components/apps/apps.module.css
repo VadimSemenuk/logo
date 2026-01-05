@@ -14,20 +14,22 @@
       align-items: center;
       gap: 10px;
 
-      .description {
+      .app_content {
         display: flex;
         flex-direction: column;
         gap: 5px;
 
-        h3 {
+        .app_title {
           font-weight: 500;
+          font-size: 18px;
         }
-        div {
+
+        .app_description {
           font-size: 15px;
         }
       }
 
-      .action {
+      .app_link {
         flex-shrink: 0;
         width: auto;
         padding: 10px;

@@ -1,0 +1,31 @@
+.description {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin-top: calc(var(--section-offset) / 2);
+  margin-bottom: var(--page-padding-horizontal);
+
+  @media(max-width: 800px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.howItWorks, .audiences, .features, .disclaimer {
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.disclaimer {
+  border-radius: var(--border-radius-xl);
+  background-color: var(--color-accent-second);
+  color: #fff;
+}

@@ -89,6 +89,10 @@ button, .button {
   transition: 150ms ease;
   width: 100%;
 
+  &a.button, &a.button span {
+    text-decoration: none !important;
+  }
+
   &:hover {
     background: #eabc7a;
   }

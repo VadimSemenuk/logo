@@ -26,28 +26,37 @@ export default function Apps() {
             title: "Delayed Auditory Feedback (DAF)",
             description:
               "Программный инструмент для терапии заикания на основе техники задержки слуховой обратной связи",
+            link: "/apps/daf",
           },
           {
             title: "Frequency-Altered Auditory Feedback (FAF)",
             description:
               "Программный инструмент для терапии заикания на основе частотно-изменённой слуховой обратной связи",
+            link: "/apps/faf",
           },
         ].map((item, index) => (
           <div
             key={index}
             className={classNames(styles.app, "card")}
           >
-            <div className={styles.description}>
-              <h3>{item.title}</h3>
-              <div>{item.description}</div>
+            <div className={styles.app_content}>
+              <a
+                className={styles.app_title}
+                href={item.link}
+                target="_blank"
+              >
+                {item.title}
+              </a>
+              <div className={styles.app_description}>{item.description}</div>
             </div>
-            <button
-              className={styles.action}
+            <a
+              href={item.link}
+              target="_blank"
+              className={classNames(styles.app_link, "button")}
               aria-label="подробнее"
-              onClick={() => {}}
             >
               <SouthEast />
-            </button>
+            </a>
           </div>
         ))}
       </div>
