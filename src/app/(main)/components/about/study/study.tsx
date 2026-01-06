@@ -27,7 +27,7 @@ export default function Study({ onMePageRequest }: Props) {
           >
             <Image
               src={item.original}
-              alt="Диплом"
+              alt={item.text || "сертификат о повышении квалификации"}
               width={150}
               height={150}
             />

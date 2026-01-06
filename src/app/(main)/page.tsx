@@ -11,12 +11,14 @@ import Questions from "@/app/(main)/components/questions/questions";
 import About from "@/app/(main)/components/about/about";
 import SeoText from "@/app/(main)/components/seo-text/seo-text";
 import Apps from "@/app/(main)/components/apps/apps";
+import JsonLD from "@/components/seo/JsonLD";
 
 export default function Page() {
   useScrollToSection();
 
   return (
     <>
+      <JsonLD />
       <Main />
       <WorkAreas />
       <Advantages />
