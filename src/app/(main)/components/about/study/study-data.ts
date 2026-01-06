@@ -20,6 +20,8 @@ import Study11 from "../../../../../../public/img/study/sm/11.webp";
 import Study11Orig from "../../../../../../public/img/study/bg/11.webp";
 import Study12 from "../../../../../../public/img/study/sm/12.webp";
 import Study12Orig from "../../../../../../public/img/study/bg/12.webp";
+import Study13 from "../../../../../../public/img/study/sm/13.webp";
+import Study13Orig from "../../../../../../public/img/study/bg/13.webp";
 
 const studyItems = [
   {
@@ -65,6 +67,10 @@ const studyItems = [
   {
     sm: Study12.src,
     original: Study12Orig.src,
+  },
+  {
+    sm: Study13.src,
+    original: Study13Orig.src,
   },
 ];
 
