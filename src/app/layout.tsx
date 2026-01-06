@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     emails: ["babanovamaya@yandex.by"],
     phoneNumbers: ["%2B375445931003"],
     siteName: "Logo Adult",
-    images: "https://www.logoadult.by/main.webp",
+    images: "https://www.logoadult.by/img/main.webp",
     url: "https://www.logoadult.by",
   },
   alternates: {
