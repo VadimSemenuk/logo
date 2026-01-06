@@ -1,4 +1,4 @@
-import Heart from "@/components/icons/heart";
+import Brain from "@/components/icons/brain";
 import Massage from "@/components/icons/massage";
 import ReadPause from "@/components/icons/read-pause";
 import DoubleArrowRight from "@/components/icons/double-arrow-right";
@@ -7,14 +7,14 @@ import Voice from "@/components/icons/voice";
 const workAreas = [
   {
     title: "Постановка и коррекция звуков",
-    description: "Коррекция нарушенных звуков, замен одинх звуков на другие",
+    description: "Коррекция нарушенных звуков, замен одних звуков на другие",
     icon: <Voice />,
   },
   {
     title: "Восстановление речи после инсульта и ЧМТ",
     description:
       "Восстановление утраченных речевых навыков после инсульта или черепно-мозговой травмы",
-    icon: <Heart />,
+    icon: <Brain />,
     iconStyle: { margin: -30 },
   },
   {

@@ -8,7 +8,7 @@ const jsonLd = {
     streetAddress: "Грюнвальдская улица, 12А",
     addressLocality: "Брест",
     addressRegion: "Брестская область",
-    postalCode: "224033",
+    postalCode: "224003",
     addressCountry: "BY",
   },
   telephone: "+375445931003",
