@@ -19,7 +19,7 @@ const contacts: Contact[] = [
     icon: <Instagram />,
   },
   {
-    link: "https://t.me/maya_babanova",
+    link: "https://t.me/logo_adult",
     className: styles.telegram,
     icon: <Telegram />,
   },
