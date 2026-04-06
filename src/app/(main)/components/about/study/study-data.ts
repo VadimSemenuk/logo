@@ -22,6 +22,10 @@ import Study12 from "../../../../../../public/img/study/sm/12.webp";
 import Study12Orig from "../../../../../../public/img/study/bg/12.webp";
 import Study13 from "../../../../../../public/img/study/sm/13.webp";
 import Study13Orig from "../../../../../../public/img/study/bg/13.webp";
+import Study14 from "../../../../../../public/img/study/sm/14.webp";
+import Study14Orig from "../../../../../../public/img/study/bg/14.webp";
+import Study15 from "../../../../../../public/img/study/sm/15.webp";
+import Study15Orig from "../../../../../../public/img/study/bg/15.webp";
 
 const studyItems = [
   {
@@ -76,6 +80,14 @@ const studyItems = [
     sm: Study13.src,
     original: Study13Orig.src,
     text: 'Сертификат о прохождении повышения квалификации по теме "Заикание у детей и подростков"',
+  },
+  {
+    sm: Study14.src,
+    original: Study14Orig.src,
+  },
+  {
+    sm: Study15.src,
+    original: Study15Orig.src,
   },
 ];
 

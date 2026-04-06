@@ -18,6 +18,8 @@ export default function Feedbacks() {
     isOpen: false,
   });
 
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
   return (
     <div
       id="feedbacks"
@@ -29,7 +31,7 @@ export default function Feedbacks() {
       </div>
 
       <div className={styles.feedbacksList}>
-        {feedbacks.map((item, index) => (
+        {feedbacks.slice(0, isExpanded ? feedbacks.length : 3).map((item, index) => (
           <FeedbackView
             key={index}
             item={item}
@@ -55,6 +57,16 @@ export default function Feedbacks() {
           <span>🤍</span>
         </div>
       </div>
+
+      <button
+        style={{
+          marginTop: "30px",
+        }}
+        aria-label="обо мне"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        {isExpanded ? "Свернуть" : "Показать все отзывы"}
+      </button>
     </div>
   );
 }
