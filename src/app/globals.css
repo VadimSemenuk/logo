@@ -70,6 +70,7 @@ img, video {
 .card {
   background: var(--color-surface);
   padding: 40px;
+  border-radius: 10px;
 
   &.outline {
     background: transparent;

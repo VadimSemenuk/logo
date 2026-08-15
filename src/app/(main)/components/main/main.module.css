@@ -22,7 +22,7 @@
       }
 
       .description {
-        font-size: clamp(20px, 2.1vw, 26px);
+        font-size: clamp(18px, 2.1vw, 26px);
         margin-top: 40px;
 
         .highlight {
@@ -55,7 +55,7 @@
       height: 550px;
       object-fit: cover;
       width: 100%;
-      border-radius: var(--border-radius-xl);
+      border-radius: var(--border-radius-full);
     }
   }
 
@@ -97,18 +97,22 @@
 
       .textWrapper {
         order: 2;
-        margin-top: 26px;
+        margin-top: 20px;
 
         .description {
           margin: 0 auto;
-          margin-top: 30px;
+          margin-top: 25px;
+        }
+
+        .action {
+          margin-top: 45px;
         }
       }
 
       img {
         order: 1;
-        height: 300px;
-        max-width: 400px;
+        height: 350px;
+        max-width: 250px;
         margin: 0 auto;
       }
     }
