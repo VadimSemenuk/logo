@@ -6,6 +6,30 @@ export default function Prices() {
     document.getElementById("callback")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const prices = {
+    byn: {
+      oneTime: 60,
+      subscriptionOneTime: 55,
+      subscriptionFull: 440,
+      consultation: 100,
+      supervision: 150,
+    },
+    rub: {
+      oneTime: 2200,
+      subscriptionOneTime: 2000,
+      subscriptionFull: 16000,
+      consultation: 3500,
+      supervision: 4000,
+    },
+    usd: {
+      oneTime: 30,
+      subscriptionOneTime: 25,
+      subscriptionFull: 200,
+      consultation: 50,
+      supervision: 60,
+    },
+  };
+
   return (
     <div
       id="prices"
@@ -22,21 +46,21 @@ export default function Prices() {
 
             <div className={styles.priceItem_valuesWrapper}>
               <div className={styles.priceItem_valueWrapper}>
-                <span className={styles.priceItem_value}>60</span>&nbsp;
+                <span className={styles.priceItem_value}>{prices.byn.oneTime}</span>&nbsp;
                 <span className={styles.priceItem_currency}>BYN</span>
               </div>
 
               <div className={styles.priceItem_split}></div>
 
               <div className={styles.priceItem_valueWrapper}>
-                <span className={styles.priceItem_value}>2000</span>&nbsp;
+                <span className={styles.priceItem_value}>{prices.rub.oneTime}</span>&nbsp;
                 <span className={styles.priceItem_currency}>RUB</span>
               </div>
 
               <div className={styles.priceItem_split}></div>
 
               <div className={styles.priceItem_valueWrapper}>
-                <span className={styles.priceItem_value}>25</span>&nbsp;
+                <span className={styles.priceItem_value}>{prices.usd.oneTime}</span>&nbsp;
                 <span className={styles.priceItem_currency}>USD</span>
               </div>
             </div>
@@ -58,27 +82,31 @@ export default function Prices() {
 
             <div className={styles.priceItem_valuesWrapper}>
               <div className={styles.priceItem_valueWrapper}>
-                <span className={styles.priceItem_value}>55</span>&nbsp;
+                <span className={styles.priceItem_value}>{prices.byn.subscriptionOneTime}</span>
+                &nbsp;
                 <span className={styles.priceItem_currency}>BYN</span>
               </div>
 
               <div className={styles.priceItem_split}></div>
 
               <div className={styles.priceItem_valueWrapper}>
-                <span className={styles.priceItem_value}>1800</span>&nbsp;
+                <span className={styles.priceItem_value}>{prices.rub.subscriptionOneTime}</span>
+                &nbsp;
                 <span className={styles.priceItem_currency}>RUB</span>
               </div>
 
               <div className={styles.priceItem_split}></div>
 
               <div className={styles.priceItem_valueWrapper}>
-                <span className={styles.priceItem_value}>23</span>&nbsp;
+                <span className={styles.priceItem_value}>{prices.usd.subscriptionOneTime}</span>
+                &nbsp;
                 <span className={styles.priceItem_currency}>USD</span>
               </div>
             </div>
 
             <div>
-              Общая стоимость: <br /> 440 BYN | 14400 RUB | 184 USD
+              Общая стоимость: <br /> {prices.byn.subscriptionFull} BYN |{" "}
+              {prices.rub.subscriptionFull} RUB | {prices.usd.subscriptionFull} USD
             </div>
 
             <button
@@ -93,36 +121,25 @@ export default function Prices() {
 
       <div className={styles.priceItemsWrapper}>
         <div className={classNames(styles.priceItem, styles.priceItemSM, "card")}>
-          <span className={styles.priceItem_title}>Логопедический массаж</span>
-
-          <div className={styles.priceItem_valuesWrapper}>
-            <div className={styles.priceItem_valueWrapper}>
-              <span className={styles.priceItem_value}>40</span>&nbsp;
-              <span className={styles.priceItem_currency}>BYN</span>
-            </div>
-          </div>
-        </div>
-
-        <div className={classNames(styles.priceItem, styles.priceItemSM, "card")}>
           <span className={styles.priceItem_title}>Консультация</span>
 
           <div className={styles.priceItem_valuesWrapper}>
             <div className={styles.priceItem_valueWrapper}>
-              <span className={styles.priceItem_value}>90</span>&nbsp;
+              <span className={styles.priceItem_value}>{prices.byn.consultation}</span>&nbsp;
               <span className={styles.priceItem_currency}>BYN</span>
             </div>
 
             <div className={styles.priceItem_split}></div>
 
             <div className={styles.priceItem_valueWrapper}>
-              <span className={styles.priceItem_value}>3000</span>&nbsp;
+              <span className={styles.priceItem_value}>{prices.rub.consultation}</span>&nbsp;
               <span className={styles.priceItem_currency}>RUB</span>
             </div>
 
             <div className={styles.priceItem_split}></div>
 
             <div className={styles.priceItem_valueWrapper}>
-              <span className={styles.priceItem_value}>35</span>&nbsp;
+              <span className={styles.priceItem_value}>{prices.usd.consultation}</span>&nbsp;
               <span className={styles.priceItem_currency}>USD</span>
             </div>
           </div>
@@ -133,21 +150,21 @@ export default function Prices() {
 
           <div className={styles.priceItem_valuesWrapper}>
             <div className={styles.priceItem_valueWrapper}>
-              <span className={styles.priceItem_value}>130</span>&nbsp;
+              <span className={styles.priceItem_value}>{prices.byn.supervision}</span>&nbsp;
               <span className={styles.priceItem_currency}>BYN</span>
             </div>
 
             <div className={styles.priceItem_split}></div>
 
             <div className={styles.priceItem_valueWrapper}>
-              <span className={styles.priceItem_value}>3500</span>&nbsp;
+              <span className={styles.priceItem_value}>{prices.rub.supervision}</span>&nbsp;
               <span className={styles.priceItem_currency}>RUB</span>
             </div>
 
             <div className={styles.priceItem_split}></div>
 
             <div className={styles.priceItem_valueWrapper}>
-              <span className={styles.priceItem_value}>45</span>&nbsp;
+              <span className={styles.priceItem_value}>{prices.usd.supervision}</span>&nbsp;
               <span className={styles.priceItem_currency}>USD</span>
             </div>
           </div>
