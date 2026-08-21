@@ -15,7 +15,7 @@ export default function Prices() {
       supervision: 150,
     },
     rub: {
-      oneTime: 2200,
+      oneTime: 2500,
       subscriptionOneTime: 2000,
       subscriptionFull: 16000,
       consultation: 3500,
