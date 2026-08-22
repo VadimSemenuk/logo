@@ -1,37 +1,38 @@
 import styles from "./prices.module.css";
 import classNames from "classnames";
+import Utils from "./../../../../utils/Utils";
 
 export default function Prices() {
   const handleCallbackClick = () => {
     document.getElementById("callback")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  console.log(process.env.NEXT_PUBLIC_PRICE_BLR_ONETIME);
-  console.log(process.env.NEXT_PUBLIC_PRICE_BLR_ONETIME);
-
   const prices = {
     byn: {
-      oneTime: 60,
-      subscriptionOneTime: 55,
-      subscriptionFull: 440,
-      consultation: 100,
-      supervision: 150,
+      oneTime: process.env.NEXT_PUBLIC_PRICE_BYN_ONETIME,
+      subscriptionOneTime: process.env.NEXT_PUBLIC_PRICE_BYN_SUBSCRIPTION,
+      subscriptionFull: 0,
+      consultation: process.env.NEXT_PUBLIC_PRICE_BYN_CONSULT,
+      supervision: process.env.NEXT_PUBLIC_PRICE_BYN_SUPERVISION,
     },
     rub: {
-      oneTime: 2500,
-      subscriptionOneTime: 2000,
-      subscriptionFull: 16000,
-      consultation: 3500,
-      supervision: 4000,
+      oneTime: process.env.NEXT_PUBLIC_PRICE_RUB_ONETIME,
+      subscriptionOneTime: process.env.NEXT_PUBLIC_PRICE_RUB_SUBSCRIPTION,
+      subscriptionFull: 0,
+      consultation: process.env.NEXT_PUBLIC_PRICE_RUB_CONSULT,
+      supervision: process.env.NEXT_PUBLIC_PRICE_RUB_SUPERVISION,
     },
     usd: {
-      oneTime: 30,
-      subscriptionOneTime: 25,
-      subscriptionFull: 200,
-      consultation: 50,
-      supervision: 60,
+      oneTime: process.env.NEXT_PUBLIC_PRICE_USD_ONETIME,
+      subscriptionOneTime: process.env.NEXT_PUBLIC_PRICE_USD_SUBSCRIPTION,
+      subscriptionFull: 0,
+      consultation: process.env.NEXT_PUBLIC_PRICE_USD_CONSULT,
+      supervision: process.env.NEXT_PUBLIC_PRICE_USD_SUPERVISION,
     },
   };
+  prices.byn.subscriptionFull = Utils.stringToNumber(prices.byn.subscriptionOneTime) * 8;
+  prices.rub.subscriptionFull = Utils.stringToNumber(prices.rub.subscriptionOneTime) * 8;
+  prices.usd.subscriptionFull = Utils.stringToNumber(prices.usd.subscriptionOneTime) * 8;
 
   return (
     <div
@@ -111,8 +112,6 @@ export default function Prices() {
               Общая стоимость: <br /> {prices.byn.subscriptionFull} BYN |{" "}
               {prices.rub.subscriptionFull} RUB | {prices.usd.subscriptionFull} USD
             </div>
-
-            {process.env.NEXT_PUBLIC_PRICE_BLR_ONETIME}
 
             <button
               aria-label="получить консультацию"
