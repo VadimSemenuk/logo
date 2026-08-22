@@ -7,6 +7,7 @@ export default function Prices() {
   };
 
   console.log(process.env.NEXT_PUBLIC_PRICE_BLR_ONETIME);
+  console.log(process.env.NEXT_PUBLIC_PRICE_BLR_ONETIME);
 
   const prices = {
     byn: {
