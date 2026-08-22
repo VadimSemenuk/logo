@@ -6,6 +6,8 @@ export default function Prices() {
     document.getElementById("callback")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  console.log(process.env.NEXT_PUBLIC_PRICE_BLR_ONETIME);
+
   const prices = {
     byn: {
       oneTime: 60,
@@ -108,6 +110,8 @@ export default function Prices() {
               Общая стоимость: <br /> {prices.byn.subscriptionFull} BYN |{" "}
               {prices.rub.subscriptionFull} RUB | {prices.usd.subscriptionFull} USD
             </div>
+
+            {process.env.NEXT_PUBLIC_PRICE_BLR_ONETIME}
 
             <button
               aria-label="получить консультацию"
